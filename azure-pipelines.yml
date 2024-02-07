@@ -2,12 +2,12 @@
 name: $(majorVersion).$(minorVersion).$(patchVersion)
 variables:
   majorVersion: 0
-  minorVersion: 21
+  minorVersion: 22
   patchVersion: $[counter(variables['minorVersion'], 1)]  # this will reset when we bump minor
   jackettVersion: $(majorVersion).$(minorVersion).$(patchVersion)
   buildConfiguration: Release
-  netCoreFramework: net6.0
-  netCoreSdkVersion: 6.0.x
+  netCoreFramework: net8.0
+  netCoreSdkVersion: 8.0.x
   # system.debug: true
 
 trigger:
